@@ -9,13 +9,16 @@
             <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="usuarioService.selectedUsuario._id">
             <div class="row">
                 <div class="input-field col-s12">
+                <input type="text" name="idempleado"  #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.idempleado" placeholder="Id Empleado">
+              </div>
+                <div class="input-field col-s12">
                     <input type="text" name="isActive" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.isActive" placeholder="Activo ">
                   </div>
               <div class="input-field col-s12">
                 <input type="text" name="name" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.name" placeholder="Ingresa Nombre">
               </div>
               <div class="input-field col-s12">
-                <input type="text" name="age" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.age" placeholder="Ingresar edad">
+                <input type="text" title="Ingresa edad" name="age" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.age" placeholder="Ingresar edad">
               </div>
               <div class="input-field col-s12">
                 <input type="text" name="company" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.company" placeholder="Ingresa company">
@@ -24,11 +27,20 @@
                 <input type="text" name="email" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.email" value="" placeholder="Ingresa email">
               </div>
               <div class="input-field col-s12">
-                <input type="text" name="phone" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.phone" value="" placeholder="Ingresa phone">
+                <input type="text" title="Ingresa telefono" name="phone" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.phone" value="" placeholder="Ingresa Telefono">
               </div>
               <div class="input-field col-s12">
                 <input type="text" name="address" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.address" value="" placeholder="Ingresa Direccion">
               </div>
+              <select name="transporte">
+
+                  <option>Coche</option>
+                  
+                  <option>Avión</option>
+                  
+                  <option>Tren</option>
+                  
+                  </select>
 
              <!-- id: { type: String, required: true},
     age: { type: Number, required: true },
@@ -54,7 +66,8 @@
     <div class="col s7">
       <table class="striped highlight black-text">
         <thead>
-            <th>Activo</th>
+            <th>Id Empleado</th>
+          <th>Activo</th>
           <th>Nombre</th>
           <th>Edad</th>
           <th>Compañia</th>
@@ -64,7 +77,8 @@
         </thead>
         <tbody>
           <tr *ngFor="let usuarios of usuarioService.usuario">
-              <td>{{usuarios.isActive}}</td>
+            <td>{{usuarios.idempleado}}</td>
+            <td>{{usuarios.isActive}}</td>
             <td>{{usuarios.name}}</td>
             <td>{{usuarios.age}}</td>
             <td>{{usuarios.company}}</td>

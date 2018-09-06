@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const usuarioSchema = new Schema({
+    idempleado:{type:String, required:true},
     isActive:{type:String, required:true},
     age: { type: Number, required: true },
     name: { type: String, required: true },
