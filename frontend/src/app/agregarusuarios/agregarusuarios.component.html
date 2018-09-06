@@ -54,14 +54,23 @@
     <div class="col s7">
       <table class="striped highlight black-text">
         <thead>
+            <th>Activo</th>
           <th>Nombre</th>
-          <th>Posicion</th>
-          <th>Region</th>
-          <th>Monto</th>
+          <th>Edad</th>
+          <th>Compañia</th>
+          <th>Email</th>
+          <th>Telefono</th>
+          <th>Direccion</th>
         </thead>
         <tbody>
           <tr *ngFor="let usuarios of usuarioService.usuario">
+              <td>{{usuarios.isActive}}</td>
             <td>{{usuarios.name}}</td>
+            <td>{{usuarios.age}}</td>
+            <td>{{usuarios.company}}</td>
+            <td>{{usuarios.email}}</td>
+            <td>{{usuarios.phone}}</td>
+            <td>{{usuarios.address}}</td>
            
             <td>
               <a (click)="editUsuario(usuarios)">
