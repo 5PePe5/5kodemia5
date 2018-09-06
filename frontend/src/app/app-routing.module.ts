@@ -19,7 +19,9 @@ path: 'agregarusuarios',
 path: 'login',
 component:LoginComponent
 
-  }
+  },
+  
+  { path: '', redirectTo: '/inicio', pathMatch: 'full' }
 
 ]
 @NgModule({
