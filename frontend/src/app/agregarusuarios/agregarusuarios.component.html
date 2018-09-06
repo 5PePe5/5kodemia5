@@ -1,0 +1,61 @@
+ <h3>Alta de Usuarios</h3>
+
+<div class="container">
+  <div class="row">
+    <div class="col s5">
+      <div class="card">
+        <div class="card-content">
+          <form #usuariosForm="ngForm" (ngSubmit)="addUsuario(usuarioForm)">
+            <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="usuarioService.selectedUsuario._id">
+            <div class="row">
+              <div class="input-field col-s12">
+                <input type="text" name="name" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.name" placeholder="Ingresa Nombre">
+              </div>
+              <div class="input-field col-s12">
+                <input type="text" name="age" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.position" placeholder="Ingresa proyecto">
+              </div>
+              <div class="input-field col-s12">
+                <input type="text" name="company" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.office" placeholder="Ingresa Region">
+              </div>
+              <div class="input-field col-s12">
+                <input type="text" name="salary" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.salary" value="" placeholder="Ingresa Monto a recaudar">
+              </div>
+             
+              <div class="card-action">
+                <div class="input-field col-s12">
+                  <button class="btn right" style="margin-left: 2px;" (click)="resetForm(usuariosForm)">Limpiar</button>
+                  <button class="btn right">Guardar</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col s7">
+      <table class="striped highlight black-text">
+        <thead>
+          <th>Nombre</th>
+          <th>Posicion</th>
+          <th>Region</th>
+          <th>Monto</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let usuarios of usuarioService.usuarios">
+            <td>{{ usuario.name }}</td>
+           
+            <td>
+              <a (click)="editUsuario(usurio)">
+                <i class="material-icons">Editar</i>
+              </a>
+              <a (click)="deleteUsuario(usuario._id, usuarioForm)">
+                <i class="material-icons">Eliminar</i>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
