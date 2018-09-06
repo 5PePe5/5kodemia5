@@ -16,7 +16,7 @@ usuariosCtrl.createUsuario = async (req, res, next) => {
         company: req.body.company,
         email: req.body.email,
         phone: req.body.phone,
-        addres: req.body.addres
+        address: req.body.address
     });
     await usuario.save();
     res.json({status: 'Usuario created'});
@@ -38,7 +38,7 @@ usuariosCtrl.editUsuario = async (req, res, next) => {
         company: req.body.company,
         email: req.body.email,
         phone: req.body.phone,
-        addres: req.body.addres
+        address: req.body.address
         
     };
     await Usuarios.findByIdAndUpdate(id, {$set: usuario}, {new: true});

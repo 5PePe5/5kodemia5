@@ -8,7 +8,7 @@ export class Usuario{
         this.company = company;
         this.email = email;
         this.phone = phone;
-        this.address = address;
+        this.address = address
       
     }
 
