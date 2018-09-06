@@ -24,8 +24,13 @@
             ],
             "styles": [
               "src/styles.css"
+             
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.slim.min.js",
+              
+              
+            ]
           },
           "configurations": {
             "production": {

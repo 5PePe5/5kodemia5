@@ -6,19 +6,24 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 import { AgregarusuariosComponent } from './agregarusuarios/agregarusuarios.component';
 import { FormsModule } from '@angular/forms'; // <-- ngModel lives here 
 import {HttpClientModule} from '@angular/common/http';
+import { HeaderComponent } from './header/header.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UsuariosComponent,
-    AgregarusuariosComponent
+    AgregarusuariosComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
    
-    HttpClientModule
+    HttpClientModule,
+   
+    AppRoutingModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
