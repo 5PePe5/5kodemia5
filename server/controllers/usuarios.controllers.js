@@ -8,7 +8,7 @@ usuariosCtrl.getUsuarios = async (req, res, next) => {
 };
 
 usuariosCtrl.createUsuario = async (req, res, next) => {
-    const usuario = new Usuario({
+    const usuario = new Usuarios({
         id: req.body.id,
         isActive: req.body.isActive,
         age: req.body.age,

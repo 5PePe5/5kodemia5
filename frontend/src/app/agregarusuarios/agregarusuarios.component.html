@@ -5,27 +5,46 @@
     <div class="col s5">
       <div class="card">
         <div class="card-content">
-          <form #usuariosForm="ngForm" (ngSubmit)="addUsuario(usuarioForm)">
+          <form #usuariosForm="ngForm" (ngSubmit)="addUsuario(usuariosForm)">
             <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="usuarioService.selectedUsuario._id">
             <div class="row">
+                <div class="input-field col-s12">
+                    <input type="text" name="isActive" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.isActive" placeholder="Activo ">
+                  </div>
               <div class="input-field col-s12">
                 <input type="text" name="name" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.name" placeholder="Ingresa Nombre">
               </div>
               <div class="input-field col-s12">
-                <input type="text" name="age" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.position" placeholder="Ingresa proyecto">
+                <input type="text" name="age" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.age" placeholder="Ingresar edad">
               </div>
               <div class="input-field col-s12">
-                <input type="text" name="company" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.office" placeholder="Ingresa Region">
+                <input type="text" name="company" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.company" placeholder="Ingresa company">
               </div>
               <div class="input-field col-s12">
-                <input type="text" name="salary" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.salary" value="" placeholder="Ingresa Monto a recaudar">
+                <input type="text" name="email" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.email" value="" placeholder="Ingresa email">
               </div>
+              <div class="input-field col-s12">
+                <input type="text" name="phone" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.phone" value="" placeholder="Ingresa phone">
+              </div>
+              <div class="input-field col-s12">
+                <input type="text" name="address" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.address" value="" placeholder="Ingresa Direccion">
+              </div>
+
+             <!-- id: { type: String, required: true},
+    age: { type: Number, required: true },
+    name: { type: String, required: true },
+    company: { type: String, required: true},
+    email: { type: String, required: true},
+    phone: { type: Number, required: true},
+    address: { type: String, required: true}-->
              
               <div class="card-action">
                 <div class="input-field col-s12">
                   <button class="btn right" style="margin-left: 2px;" (click)="resetForm(usuariosForm)">Limpiar</button>
                   <button class="btn right">Guardar</button>
                 </div>
+
+                
               </div>
             </div>
           </form>
@@ -41,14 +60,14 @@
           <th>Monto</th>
         </thead>
         <tbody>
-          <tr *ngFor="let usuarios of usuarioService.usuarios">
-            <td>{{ usuario.name }}</td>
+          <tr *ngFor="let usuarios of usuarioService.usuario">
+            <td>{{usuarios.name}}</td>
            
             <td>
-              <a (click)="editUsuario(usurio)">
+              <a (click)="editUsuario(usuarios)">
                 <i class="material-icons">Editar</i>
               </a>
-              <a (click)="deleteUsuario(usuario._id, usuarioForm)">
+              <a (click)="deleteUsuario(usuarios._id, usuariosForm)">
                 <i class="material-icons">Eliminar</i>
               </a>
             </td>
