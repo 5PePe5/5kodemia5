@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import{UsuariosComponent} from './usuarios/usuarios.component'
 import { RouterModule, Routes } from '@angular/router';
 import{AgregarusuariosComponent} from './agregarusuarios/agregarusuarios.component'
+import{LoginComponent} from './login/login.component'
 
 
 const routes: Routes = [
@@ -13,6 +14,11 @@ const routes: Routes = [
   {
 path: 'agregarusuarios',
    component: AgregarusuariosComponent
+  },
+  {
+path: 'login',
+component:LoginComponent
+
   }
 
 ]

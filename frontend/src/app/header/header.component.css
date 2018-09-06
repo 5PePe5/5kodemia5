@@ -38,7 +38,7 @@ z-index: 1000;
 
 	header nav {
 		
-		background: #fF00008e;
+		background: rgba(255, 0, 0, 0.61);
 		width: 70%;
 		height: calc(100% -90%);
 		position: fixed;

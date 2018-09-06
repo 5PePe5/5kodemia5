@@ -1,15 +1,11 @@
-<p>
-  usuarios works!
-</p>
 
 
-<div id="divpadre">
-    <div  *ngFor="let post of posts" id="divhijos">
-            <h5>{{post.name}}</h5>
-        <a href=""><img src="https://picsum.photos/200" alt=""></a>
-        
-       <a href="">Monto Recaudado<p>$ {{post.salary}}</p></a>
-        <a href="">{{post.poyectoid}} Quiero donar</a>
+<div class="divpadre">
+    <div  *ngFor="let usuarios of posts" id="divhijos">
+            <h5>{{usuarios.name}}</h5>
+        <a href=""><img src="https://randomuser.me/api/portraits/med/men/65.jpg" alt=""></a>
+       <a href=""><p>Edad {{usuarios.age}} años</p></a>
+        <a href=""><p>Id empleado:{{usuarios.idempleado}}</p></a>
         </div>  
     </div>
   

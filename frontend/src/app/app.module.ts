@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms'; // <-- ngModel lives here
 import {HttpClientModule} from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { AppRoutingModule } from './/app-routing.module';
     AppComponent,
     UsuariosComponent,
     AgregarusuariosComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
