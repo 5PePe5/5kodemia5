@@ -106,7 +106,7 @@ border-bottom: rgba(184, 157, 1, 0.664 2px solid);
     }
   
     .modal-content {
-        width: 250px;
+        width: 300px;
         top: 20px;
         position: relative;
         margin: auto;
@@ -116,7 +116,12 @@ border-bottom: rgba(184, 157, 1, 0.664 2px solid);
         animation-name: animatetop;
         animation-duration: 0.30s;
         border-radius: 20px;
+        height:auto;
     
+    }
+    .avatarimagen{
+        width: 50px;
+          border-radius: 50%;
     }
 
 }

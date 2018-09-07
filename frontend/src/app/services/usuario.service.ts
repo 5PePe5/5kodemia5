@@ -11,7 +11,7 @@ export class UsuarioService {
   selectedUsuario: Usuario;
   usuario: Usuario[];
   
-  readonly URL_API = 'http://localhost:3000/usuarios';
+  readonly URL_API = 'http://pepe.sytes.net:3000/usuarios';
 
   constructor(private http: HttpClient) {
     this.selectedUsuario = new Usuario();
