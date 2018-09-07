@@ -39,15 +39,6 @@
                 <input type="text" name="address" #name="ngModel" [(ngModel)]="usuarioService.selectedUsuario.address" value="" placeholder="Ingresa Direccion">
               </div>
        
-
-             <!-- id: { type: String, required: true},
-    age: { type: Number, required: true },
-    name: { type: String, required: true },
-    company: { type: String, required: true},
-    email: { type: String, required: true},
-    phone: { type: Number, required: true},
-    address: { type: String, required: true}-->
-             
               <div class="card-action">
                 <div class="input-field col-s12">
                   <button class="btn right" style="margin-left: 2px;" (click)="resetForm(usuariosForm)">Limpiar</button>
@@ -61,6 +52,7 @@
         </div>
       </div>
     </div>
+    <br>
     <div class="col s7">
       <table class="striped highlight black-text">
         <thead>
