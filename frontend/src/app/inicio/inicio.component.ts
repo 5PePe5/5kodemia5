@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
+declare var M: any;
 
 @Component({
   selector: 'app-inicio',
@@ -13,3 +15,7 @@ export class InicioComponent implements OnInit {
   }
 
 }
+
+$(document).ready(function(){
+  $('#demo-carousel-indicators').carousel({fullWidth: true});
+ });
