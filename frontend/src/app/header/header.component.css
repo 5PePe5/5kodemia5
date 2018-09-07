@@ -10,6 +10,8 @@ z-index: 1000;
 
  }
 
+
+
 @media screen and (max-width: 900px) {
 
 	.menu_bar {
@@ -39,8 +41,8 @@ z-index: 1000;
 	header nav {
 		
 		background: rgba(255, 0, 0, 0.61);
-		width: 70%;
-		height: calc(100% -90%);
+		width: 150px;
+		height: auto;
 		position: fixed;
 		right:100%;
 		margin: 1px;
