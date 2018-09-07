@@ -16,6 +16,6 @@ export class InicioComponent implements OnInit {
 
 }
 
-$(document).ready(function(){
-  $('#demo-carousel-indicators').carousel({fullWidth: true});
- });
+$(document).ready(function() { 
+  $('.carousel').carousel();
+});

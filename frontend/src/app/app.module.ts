@@ -11,6 +11,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { FooterComponent } from './footer/footer.component';
+import { BarraflotanteComponent } from './barraflotante/barraflotante.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     LoginComponent,
     InicioComponent,
-    FooterComponent
+    FooterComponent,
+    BarraflotanteComponent
   ],
   imports: [
     BrowserModule,
