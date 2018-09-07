@@ -1,5 +1,5 @@
 .divpadre{
-width: 10vh;
+width: 100%;
 height: 100vh;
 
 
@@ -8,4 +8,20 @@ img{
 margin-left: 350px;
 
 
+}
+
+@media screen and (max-width: 600px){
+    
+    .divpadre{
+        width: 350px;
+        height: 300px;
+    }
+
+        
+        img{
+
+     width: 345px;
+     margin:auto;
+
+}
 }
