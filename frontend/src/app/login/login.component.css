@@ -52,7 +52,7 @@
 
 }
 .avatarimagen{
-  width: 150px;
+  width: 100px;
     border-radius: 50%;
 
 }
@@ -83,7 +83,7 @@ border-bottom: rgba(184, 157, 1, 0.664 2px solid);
 }
 
 .botoningresar:hover {
-    background: #1976D2; 
+    background: rgba(187, 0, 0, 0.76); 
 }
 
 
