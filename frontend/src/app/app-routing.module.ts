@@ -4,6 +4,7 @@ import{UsuariosComponent} from './usuarios/usuarios.component'
 import { RouterModule, Routes } from '@angular/router';
 import{AgregarusuariosComponent} from './agregarusuarios/agregarusuarios.component'
 import{LoginComponent} from './login/login.component'
+import{InicioComponent} from './inicio/inicio.component'
 
 
 const routes: Routes = [
@@ -20,7 +21,11 @@ path: 'login',
 component:LoginComponent
 
   },
-  
+  {
+    path: 'inicio',
+    component: InicioComponent
+  },
+
   { path: '', redirectTo: '/inicio', pathMatch: 'full' }
 
 ]
